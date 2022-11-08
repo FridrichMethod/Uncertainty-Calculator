@@ -72,7 +72,7 @@ eg.
 insert = 1
 
 
-# Include equation number or not
+# Include equation number or not: include_equation_number = 0 or 1
 
 eg.
 
