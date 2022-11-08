@@ -58,7 +58,7 @@ eg.
 result_unit = J/K
 
 
-# Print separately or integrally: separate = 0 or 1
+# Separate equation or not: separate = 0 or 1
 
 eg.
 
@@ -75,6 +75,8 @@ insert = 1
 # Output
 
 LaTeX code of calculation details, including normal calculation, each partial derivative, total uncertainty combination, and the final result.
+
+eg.
 
 \begin{equation}
 W=\frac{- C_\ce{H2O} \Delta T V \rho_\ce{H2O} - Q_\text{cotton} - Q_\ce{Ni} - Q_V m}{\Delta T}=\frac{- \left(0.0041824\right) \times \left(1.77\right) \times \left(3000\right) \times \left(0.99865\right) - \left(-0.01\right) - \left(-0.323\right) - \left(-26.414\right) \times \left(0.9547\right)}{\left(1.77\right)}=1.905\ \text{J} / \text{K}
