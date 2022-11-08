@@ -116,4 +116,5 @@ W=\left (1.905 \pm 0.073 \right )\ \text{kJ}/{}^\circ\text{C}
 
 # Acknowledgements
 Sympy: https://github.com/sympy/sympy
+
 LaTeX公式编辑器: https://latexlive.com
