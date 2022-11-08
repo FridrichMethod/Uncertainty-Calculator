@@ -49,13 +49,13 @@ result_digit = {'mu': 4,
                 'sigma': 2}
 
 
-# Set units of results: result_unit = 'unit'
+# Set units of results: result_unit = 'string'
 
-'unit' is a unit written in Python sympy.physics.units format, which should be set to 1 if what you want to calculate is dimensionless.
+'string' is a unit written in LaTeX format, which should be set to 1 if what you want to calculate is dimensionless.
 
 eg.
 
-result_unit = J/K
+result_unit = '\\text{kJ}/{}^\\circ\\text{C}'
 
 
 # Separate equation or not: separate = 0 or 1
@@ -72,6 +72,13 @@ eg.
 insert = 1
 
 
+# Include equation number or not
+
+eg.
+
+include_equation_number = 1
+
+
 # Output
 
 LaTeX code of calculation details, including normal calculation, each partial derivative, total uncertainty combination, and the final result.
@@ -79,7 +86,7 @@ LaTeX code of calculation details, including normal calculation, each partial de
 eg.
 
 \begin{equation}
-W=\frac{- C_\ce{H2O} \Delta T V \rho_\ce{H2O} - Q_\text{cotton} - Q_\ce{Ni} - Q_V m}{\Delta T}=\frac{- \left(0.0041824\right) \times \left(1.77\right) \times \left(3000\right) \times \left(0.99865\right) - \left(-0.01\right) - \left(-0.323\right) - \left(-26.414\right) \times \left(0.9547\right)}{\left(1.77\right)}=1.905\ \text{J} / \text{K}
+W=- C_\ce{H2O} V \rho_\ce{H2O} + \frac{- Q_\text{cotton} - Q_\ce{Ni} - Q_V m}{\Delta T}=- \left(0.0041824\right) \times \left(3000\right) \times \left(0.99865\right) + \frac{- \left(-0.01\right) - \left(-0.323\right) - \left(-26.414\right) \times \left(0.9547\right)}{\left(1.77\right)}=1.905\ \text{kJ}/{}^\circ\text{C}
 \end{equation}
 
 \begin{equation}
@@ -96,13 +103,15 @@ W=\frac{- C_\ce{H2O} \Delta T V \rho_\ce{H2O} - Q_\text{cotton} - Q_\ce{Ni} - Q_
 \begin{aligned}
 \sigma_{W}&=\sqrt{\left(\frac{\partial W }{\partial m } \sigma_{m}\right)^2+\left(\frac{\partial W }{\partial Q_\ce{Ni} } \sigma_{Q_\ce{Ni}}\right)^2+\left(\frac{\partial W }{\partial Q_\text{cotton} } \sigma_{Q_\text{cotton}}\right)^2+\left(\frac{\partial W }{\partial V } \sigma_{V}\right)^2+\left(\frac{\partial W }{\partial \Delta T } \sigma_{\Delta T}\right)^2}\\
 &=\sqrt{\left(15.0 \times 0.00023\right)^2+\left(-0.57 \times 0.00075\right)^2+\left(-0.57 \times 0.0019\right)^2+\left(-0.0042 \times 0.01\right)^2+\left(-8.2 \times 0.009\right)^2}\\
-&=0.073\ \text{J} / \text{K}
+&=\sqrt{\left(0.0034\right)^2+\left(-0.00042\right)^2+\left(-0.0011\right)^2+\left(-0.000042\right)^2+\left(-0.073\right)^2}\\
+&=0.073\ \text{kJ}/{}^\circ\text{C}
 \end{aligned}
 \end{equation}
 
 \begin{equation}
-W=\left (1.905 \pm 0.073 \right )\ \text{J} / \text{K}
+W=\left (1.905 \pm 0.073 \right )\ \text{kJ}/{}^\circ\text{C}
 \end{equation}
+
 
 
 # Acknowledgements
