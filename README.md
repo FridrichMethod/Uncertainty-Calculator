@@ -2,6 +2,8 @@
 
 Help you get rid of Physical Chemistry Experiment in CCME!
 
+I'm Zhaoyang Li. Welcome to my program!
+
 
 # Package Requirements
 
